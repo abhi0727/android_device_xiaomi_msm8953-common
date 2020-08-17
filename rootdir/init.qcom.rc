@@ -230,6 +230,9 @@ on boot
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
 
+    #Load wifi as module
+    insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
+
     # Create directory used for display
     # for backward compatibilit
     mkdir /persist/display 0770 system graphics
